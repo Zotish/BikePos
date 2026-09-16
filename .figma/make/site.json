@@ -1,0 +1,10 @@
+{
+  "description": "This web application identifies and resolves common errors in code, streamlining the debugging process for developers and enhancing productivity.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
