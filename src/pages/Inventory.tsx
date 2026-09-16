@@ -136,24 +136,24 @@ export default function Inventory({ onNavigate }: { onNavigate?: (p: string) => 
       <div className="flex items-center justify-end gap-2 sm:gap-2.5">
         <button
           onClick={handleExport}
-          className="flex-1 sm:flex-none sm:min-w-[125px] h-9 sm:h-9.5 px-3 flex items-center justify-center gap-1.5 text-xs sm:text-[13px] font-medium text-[#4B5563] border border-[#E5E7EB] rounded-lg bg-white hover:border-[#D1D5DB] transition-colors cursor-pointer whitespace-nowrap shadow-2xs"
+          className="flex-1 min-w-0 sm:flex-none sm:w-[130px] h-9 sm:h-9.5 px-2.5 sm:px-0 flex items-center justify-center gap-1.5 text-xs sm:text-[13px] font-medium text-[#4B5563] border border-[#E5E7EB] rounded-lg bg-white hover:border-[#D1D5DB] transition-colors cursor-pointer whitespace-nowrap shadow-2xs"
         >
           <Download size={14} className="shrink-0" />
-          <span>Export CSV</span>
+          <span className="truncate">Export CSV</span>
         </button>
         <button
           onClick={() => setShowTransferModal(true)}
-          className="flex-1 sm:flex-none sm:min-w-[125px] h-9 sm:h-9.5 px-3 flex items-center justify-center gap-1.5 text-xs sm:text-[13px] font-medium text-[#374151] border border-[#E5E7EB] rounded-lg bg-white hover:border-[#D85A30] transition-colors cursor-pointer whitespace-nowrap shadow-2xs"
+          className="flex-1 min-w-0 sm:flex-none sm:w-[130px] h-9 sm:h-9.5 px-2.5 sm:px-0 flex items-center justify-center gap-1.5 text-xs sm:text-[13px] font-medium text-[#374151] border border-[#E5E7EB] rounded-lg bg-white hover:border-[#D85A30] transition-colors cursor-pointer whitespace-nowrap shadow-2xs"
         >
           <ArrowLeftRight size={14} className="shrink-0" />
-          <span>Transfer</span>
+          <span className="truncate">Transfer</span>
         </button>
         <button
           onClick={() => setShowAdjustmentModal(true)}
-          className="flex-1 sm:flex-none sm:min-w-[125px] h-9 sm:h-9.5 px-3 flex items-center justify-center gap-1.5 text-xs sm:text-[13px] font-semibold bg-[#D85A30] hover:bg-[#B74421] text-white rounded-lg transition-colors cursor-pointer whitespace-nowrap shadow-xs"
+          className="flex-1 min-w-0 sm:flex-none sm:w-[130px] h-9 sm:h-9.5 px-2.5 sm:px-0 flex items-center justify-center gap-1.5 text-xs sm:text-[13px] font-semibold bg-[#D85A30] hover:bg-[#B74421] text-white rounded-lg transition-colors cursor-pointer whitespace-nowrap shadow-xs"
         >
-          <Plus size={15} className="shrink-0" />
-          <span>Adjust Stock</span>
+          <Plus size={14} className="shrink-0" />
+          <span className="truncate">Adjust Stock</span>
         </button>
       </div>
 
