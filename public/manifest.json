@@ -1,0 +1,67 @@
+{
+  "name": "BikePos - Motorcycle Parts ERP & POS",
+  "short_name": "BikePos",
+  "description": "Comprehensive Motorcycle Spare Parts Inventory, POS & Dealership Management Platform",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#FFFFFF",
+  "theme_color": "#D85A30",
+  "categories": ["business", "finance", "productivity"],
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Point of Sale",
+      "short_name": "POS",
+      "description": "Open POS Counter Checkout",
+      "url": "/?tab=pos",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Inventory & Stock",
+      "short_name": "Inventory",
+      "description": "View Stock & Warehouses",
+      "url": "/?tab=inventory",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Sales & Invoices",
+      "short_name": "Sales",
+      "description": "Manage Sales & Invoices",
+      "url": "/?tab=sales",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}

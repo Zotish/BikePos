@@ -2,6 +2,7 @@ import { useState } from "react";
 import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
 import { ToastProvider } from "./components/Toast";
+import PWAInstallBanner from "./components/PWAInstallBanner";
 import Auth from "./pages/Auth";
 import Dashboard from "./pages/Dashboard";
 import Products from "./pages/Products";
@@ -128,6 +129,7 @@ export default function App() {
     return (
       <ToastProvider>
         <Auth onLogin={() => setIsLoggedIn(true)} />
+        <PWAInstallBanner />
       </ToastProvider>
     );
   }
@@ -178,6 +180,7 @@ export default function App() {
           </main>
         </div>
       </div>
+      <PWAInstallBanner />
     </ToastProvider>
   );
 }
