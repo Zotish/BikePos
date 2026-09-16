@@ -48,11 +48,11 @@ const branchData = [
 ];
 
 const topParts = [
-  { name: "Honda CB Hornet Brake Pad (Front)", part: "HBP-CBH-160F", qty: 248, revenue: "৳ 186,000", profit: "৳ 52,080", img: "🔧", inStock: 48, cost: "৳ 540", price: "৳ 750" },
-  { name: "Motul Engine Oil 10W40 1L", part: "MOT-10W40-1L", qty: 312, revenue: "৳ 156,000", profit: "৳ 46,800", img: "🛢️", inStock: 85, cost: "৳ 650", price: "৳ 850" },
-  { name: "Yamaha FZ Air Filter", part: "YAM-FZ-AF01", qty: 189, revenue: "৳ 94,500", profit: "৳ 28,350", img: "🔩", inStock: 32, cost: "৳ 350", price: "৳ 500" },
-  { name: "Bajaj Pulsar Clutch Plate", part: "BAJ-PUL-CP01", qty: 143, revenue: "৳ 85,800", profit: "৳ 25,740", img: "⚙️", inStock: 19, cost: "৳ 420", price: "৳ 600" },
-  { name: "Suzuki Gixxer Chain Sprocket Kit", part: "SUZ-GIX-CSK", qty: 97, revenue: "৳ 77,600", profit: "৳ 23,280", img: "⛓️", inStock: 14, cost: "৳ 560", price: "৳ 800" },
+  { name: "Honda CB Hornet Brake Pad (Front)", part: "HBP-CBH-160F", qty: 248, revenue: "186,000", profit: "52,080", img: "🔧", inStock: 48, cost: "৳ 540", price: "৳ 750" },
+  { name: "Motul Engine Oil 10W40 1L", part: "MOT-10W40-1L", qty: 312, revenue: "156,000", profit: "46,800", img: "🛢️", inStock: 85, cost: "৳ 650", price: "৳ 850" },
+  { name: "Yamaha FZ Air Filter", part: "YAM-FZ-AF01", qty: 189, revenue: "94,500", profit: "28,350", img: "🔩", inStock: 32, cost: "৳ 350", price: "৳ 500" },
+  { name: "Bajaj Pulsar Clutch Plate", part: "BAJ-PUL-CP01", qty: 143, revenue: "85,800", profit: "25,740", img: "⚙️", inStock: 19, cost: "৳ 420", price: "৳ 600" },
+  { name: "Suzuki Gixxer Chain Sprocket Kit", part: "SUZ-GIX-CSK", qty: 97, revenue: "77,600", profit: "23,280", img: "⛓️", inStock: 14, cost: "৳ 560", price: "৳ 800" },
 ];
 
 const initialLowStockItems = [
@@ -336,10 +336,10 @@ export default function Dashboard({ onNavigate }: Props) {
             <table className="w-full text-left">
               <thead>
                 <tr className="border-b border-[#F3F4F6] bg-[#FAFAFA]">
-                  {["Product", "Part #", "Qty", "Revenue", "Profit", "Action"].map(h => (
+                  {["Product", "Part #", "Qty", "Revenue (৳)", "Profit (৳)", "Action"].map(h => (
                     <th
                       key={h}
-                      className="text-left text-[11px] font-semibold text-[#9CA3AF] uppercase tracking-wide px-4 sm:px-5 py-3"
+                      className="text-left text-[11px] font-semibold text-[#9CA3AF] uppercase tracking-wide px-4 sm:px-5 py-3 whitespace-nowrap"
                     >
                       {h}
                     </th>
@@ -353,7 +353,7 @@ export default function Dashboard({ onNavigate }: Props) {
                     onClick={() => setSelectedProduct(p)}
                     className="hover:bg-[#FEF0EA]/30 transition-colors cursor-pointer group"
                   >
-                    <td className="px-4 sm:px-5 py-3">
+                    <td className="px-4 sm:px-5 py-3 whitespace-nowrap">
                       <div className="flex items-center gap-2.5">
                         <span className="text-lg w-7 flex-shrink-0">{p.img}</span>
                         <div>
@@ -363,17 +363,17 @@ export default function Dashboard({ onNavigate }: Props) {
                         </div>
                       </div>
                     </td>
-                    <td className="px-4 sm:px-5 py-3 text-[12px] text-[#6B7280] font-mono">{p.part}</td>
-                    <td className="px-4 sm:px-5 py-3 text-[13px] font-semibold text-[#111827]">{p.qty}</td>
-                    <td className="px-4 sm:px-5 py-3 text-[13px] text-[#111827]">{p.revenue}</td>
-                    <td className="px-4 sm:px-5 py-3 text-[13px] font-semibold text-[#16A34A]">{p.profit}</td>
-                    <td className="px-4 sm:px-5 py-3 text-[11px]">
+                    <td className="px-4 sm:px-5 py-3 text-[12px] text-[#6B7280] font-mono whitespace-nowrap">{p.part}</td>
+                    <td className="px-4 sm:px-5 py-3 text-[13px] font-semibold text-[#111827] whitespace-nowrap">{p.qty}</td>
+                    <td className="px-4 sm:px-5 py-3 text-[13px] text-[#111827] whitespace-nowrap">{p.revenue}</td>
+                    <td className="px-4 sm:px-5 py-3 text-[13px] font-semibold text-[#16A34A] whitespace-nowrap">{p.profit}</td>
+                    <td className="px-4 sm:px-5 py-3 text-[11px] whitespace-nowrap">
                       <button
                         onClick={e => {
                           e.stopPropagation();
                           setSelectedProduct(p);
                         }}
-                        className="text-[#D85A30] hover:underline font-medium"
+                        className="text-[#D85A30] hover:underline font-medium cursor-pointer"
                       >
                         Inspect
                       </button>
